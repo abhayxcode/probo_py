@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_PASSWORD }}/probo-py:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/probo-py:latest
 
       # Deploy to EC2
       - name: Deploy to EC2
@@ -38,8 +38,8 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull ${{ secrets.DOCKER_PASSWORD }}/probo-py:latest
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/probo-py:latest
             sudo docker stop probo-backend || true
             sudo docker rm probo-backend || true
-            sudo docker run -d --restart always --name probo-backend --env-file .env -p 8000:8000 ${{ secrets.DOCKER_PASSWORD }}/probo-py:latest
+            sudo docker run -d --restart always --name probo-backend --env-file .env -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/probo-py:latest
             sudo docker image prune -f

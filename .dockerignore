@@ -1,0 +1,28 @@
+# Ignore Python bytecode files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv
+env
+.venv
+.env*
+
+# Ignore version control files
+.git
+.gitignore
+.github
+
+# Ignore Docker-related files (if not needed for the image)
+.dockerignore
+Dockerfile
+
+# Ignore logs and other temporary files
+*.log
+*.bak
+
+# Ignore IDE specific files
+.vscode
+.idea

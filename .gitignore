@@ -1,0 +1,62 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+*.egg-info/
+*.pytest_cache/
+.Python
+
+# Environment variables
+.env
+*.env
+
+# Logs
+*.log
+*.out
+*.err
+logs/
+
+# Virtual environments
+venv/
+env/
+
+# Cache
+*.cache
+*.mypy_cache
+*.pyre/
+dmypy.json
+.pytype/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.DS_Store
+
+# Test coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Build files
+build/
+dist/
+*.egg
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.manifest
+
+# Docker
+docker-compose.override.yml
+*.pid
+*.tar
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Static files
+staticfiles/
+media/
